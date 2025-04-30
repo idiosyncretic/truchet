@@ -50,3 +50,15 @@ for i in range(NIMG):
         **make_bgfg(i/NIMG, (.55, .45), .45),
         format="png", output=f"{DIR}/bg_{i:03d}.png",
     )
+
+# Dell 34" curved monitor
+DIR = "~/wallpaper/tru6/2560"
+NIMG = 120
+for i in range(NIMG):
+    multiscale_truchet(
+        tiles=n6_circles, width=2560, height=1080, tilew=150, nlayers=3,
+        chance=.4,
+        seed=i*10,
+        **make_bgfg(i/NIMG, (.55, .45), .45),
+        format="png", output=f"{DIR}/bg_{i:03d}.png",
+    )
